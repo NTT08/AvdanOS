@@ -1,0 +1,173 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    animation: fadeIn 1s ease;
+    background-color: black;
+}
+
+.bg{
+    height: 100%;
+    /* display: none; */
+    position: fixed;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        display: block;
+    }
+    to{
+        opacity: 1;
+        display: none;
+    }
+}
+
+@keyframes fadeOut {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+@keyframes dragFullDown {
+    to{
+        top: 10px;
+    }
+}
+
+
+.time-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+.swipe-container{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 50%;
+}
+
+.time-container h1{
+    font-size: 100px;
+    line-height: 0.9;
+    background-color: rgba(0, 0, 0, 0.205);
+    padding: 30px;
+    color: white;
+    margin-bottom: 200px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.swipe{
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    border-radius: 100px;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    height: 0.5%;
+    position: fixed;
+    cursor: grab;
+}
+
+.login-container{
+    background-color: rgba(2, 2, 2, 0.062);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    bottom: -860px;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container .login-account{
+    width: 150px;
+    margin-bottom: 10px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 100%;
+}
+
+.login-container .login-account img{
+    width: 100%;
+    height: 100%;
+}
+
+.login-container .login-textbox h2{
+    margin-bottom: 7px;
+}
+
+.login-container .login-textbox input{
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.login-account-container{
+    background-color: rgb(214, 214, 214);
+    backdrop-filter: blur(10px);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+    width: 400px;
+    border-radius: 30px;
+}
+
+.login-account-container *{
+    color: black;
+}
+
+.login-account-container h1{
+    margin-bottom: 10px;
+}
+
+.login-account-container button{
+    padding: 10px 20px;
+    width: 100%;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    border-radius: 10px;
+    background-color: rgb(103, 103, 255);
+    font-weight: 700;
+}
+
+.login-account-container .login-status{
+    width: 100%;
+    height: 35px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.login-account-container .login-status.success{
+    background-color: rgb(0, 255, 98);
+}
+
+.login-account-container .login-status.failed{
+    background-color: rgb(255, 24, 24);
+}
